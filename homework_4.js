@@ -158,3 +158,10 @@ function isEven(even) {
 }
 
 console.log(isEven(5))
+
+let textArr= str.split(' ');
+    for (let i = 0; i < textArr.length; i++){
+        textArr[i]= textArr[i][0].toUpperCase()+ textArr[i].slice(1);
+        return
+    }
+    
