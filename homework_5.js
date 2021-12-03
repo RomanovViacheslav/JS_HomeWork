@@ -324,3 +324,102 @@ console.log(arr)
 
 // 26.
 // Сделайте функцию getDigitsSum (digit - это цифра), которая параметром принимает целое число и возвращает сумму его цифр.
+function getDigitsSum(digit) {
+    let str = digit + "";
+    str.split("");
+    let sum = 0;
+    for (let i = 0; i < str.length; i++) {
+        sum += Number(str[i])
+    }
+    return sum;    
+    
+}
+console.log(getDigitsSum(155))
+
+// 27.
+// Найдите все года от 1 до 2020, сумма цифр которых равна 13. 
+// Для этого используйте вспомогательную функцию getDigitsSum из предыдущей задачи.
+function searchNum(year) {
+    sum =[]
+    for (let i = 0; i <= year; i++) {
+        if (getDigitsSum(i) === 13) {
+            sum.push(i)
+        }    
+    } 
+    return sum
+}
+
+console.log(searchNum(2020))
+
+// 28.
+// Дано число. Сложите его цифры. Если сумма получилась более 9-ти, опять сложите его цифры. 
+// И так, пока сумма не станет однозначным числом (9 и менее).
+function getSum(num) {
+    let str = num + "";
+    let sum = 0
+    for (let i = 0; i < str.length; i++ ) {
+        sum += Number(str[i]) 
+    }
+    if (sum > 9) {
+        return getSum(String(sum))
+    } else return sum
+        
+}
+
+console.log(getSum(9999999999999))
+
+
+// // 29.
+// //  Напишите функцию, которая возвращает новый объект без указанных значений.
+
+const without = (obj, field) => {
+    delete obj[field];
+    return obj
+}
+const user1 = {
+	name: 'Дмитрий',
+	city: 'Нижний Новгород'
+}
+// without(user, 'city') =>  { name: 'Дмитрий' }
+
+console.log(without(user1, 'city'))
+
+// // Дополнительно: реализовать удаление любого количества полей
+
+// Написать функцию, которая проверяет наличие поля в объекте.
+const checkField= (obj, field) => {
+    if (field in obj){
+        return true
+    } else return false
+    
+}
+const user = {
+	name: 'Дмитрий',
+	city: 'Нижний Новгород'
+}
+checkField(user, 'name') 
+checkField(user, 'lastname') 
+
+console.log(checkField(user, 'name'))
+console.log(checkField(user, 'lastname'))
+
+// 31.
+//  Написать функцию, которая принимает число от 1 до 7 и возвращает день недели.
+//  Решить с помощью объектов.
+
+const day = {
+    1: 'Понедельник',
+    2: 'Вторник',
+    3: 'Среда',
+    4: 'Четверг',
+    5: 'Пятница',
+    6: 'Суббота',
+    7: 'Воскресенье',
+}
+
+const checkDay = (num) => {
+    let result = day[num] 
+    return result
+}
+
+console.log(checkDay(7))
