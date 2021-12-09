@@ -423,3 +423,13 @@ const checkDay = (num) => {
 }
 
 console.log(checkDay(7))
+
+var str = "JavaScript"; 
+
+let foo2 = (arr) => {
+let result=[]
+return str.substring(0,2)
+}
+
+// foo(arr); // [Ja,Jav,ava,vaS,aSc,Scr,cri,rip,ipt,pt] 
+console.log(foo2(str));

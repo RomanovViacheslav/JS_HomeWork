@@ -159,9 +159,21 @@ function isEven(even) {
 
 console.log(isEven(5))
 
-let textArr= str.split(' ');
-    for (let i = 0; i < textArr.length; i++){
-        textArr[i]= textArr[i][0].toUpperCase()+ textArr[i].slice(1);
-        return
+// let textArr= str.split(' ');
+//     for (let i = 0; i < textArr.length; i++){
+//         textArr[i]= textArr[i][0].toUpperCase()+ textArr[i].slice(1);
+//         return
+//     }
+    
+var str = "JavaScript"; 
+function arr1(str) {
+    let array = str.split(" ");
+    let x = [];
+    for (i = 0; i < array.length; i++) {
+    x.push(array[i][0]);
     }
     
+    return x;
+    }
+
+console.log(arr1(str));
