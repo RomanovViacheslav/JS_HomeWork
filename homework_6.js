@@ -68,7 +68,6 @@ console.log(foo(str));
 
 // let foo2 = (arr) => {
 
-
 // }
 
 // // foo(arr); // [Ja,Jav,ava,vaS,aSc,Scr,cri,rip,ipt,pt] 
