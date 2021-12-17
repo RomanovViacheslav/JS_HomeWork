@@ -271,3 +271,4 @@ let sameNum = (a, b) => {
 }
 
 console.log(sameNum (arr1, arr2));
+
