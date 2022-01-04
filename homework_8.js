@@ -152,10 +152,7 @@ function createTask(taskName) {
     let count = 0   
         
         return function(flag=undefined){
-            // if (flag === true) {
-            //     console.log(taskName+" - Завершена");
 
-            // }        
 
             if (count === 0){
                 console.log(taskName+" - не назначена");
